@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kiem_tra_so_nguyen_to </title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("nhap vao mot so");
+        isPrime(number)
+
+        function isPrime(number) {
+            let count = 0;
+            let isPrime = false;
+            if (number == 0) {
+                alert(number + "khong phai la so nguyen to");
+            } else {
+                for (let i = 1; i <= number; i++) {
+                    if (number % i == 0) {
+                        count = count + 1;
+                    }
+                }
+                if (count == 2) {
+                    isPrime = true;
+                }
+                if (isPrime) {
+                    alert(number + " là số nguyên tố")
+                } else {
+                    alert(number + " không là số nguyên tố")
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

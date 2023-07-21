@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_2</title>
+</head>
+
+<body>
+    <script>
+        let sellBusiness = +prompt("vui lòng nhập bán kính");
+        let pi = 3.14;
+
+
+        function call() {
+            acreage = (Math.pow(sellBusiness, 2)) * pi;// tính diện tích.
+            perimeter = (sellBusiness * 2) * pi;// tính chu vi.
+        }
+        call();
+        document.write("diện tích của hình tròn bằng:" + acreage + "</br>");
+        document.write("chu vi của hình tròn bằng:" + perimeter);
+
+    </script>
+</body>
+
+</html>

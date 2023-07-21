@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_7</title>
+</head>
+
+<body>
+    <script>
+        let number1 = +prompt("vui lòng nhập vào")
+        let number2 = +prompt("vui lòng nhập vào")
+        document.write("số bạn nhập là:" + "(" + number1 + "," + number2 + ")" + "</br>");
+        function swap(number1, number2) {
+            let doSth = number1;
+            number1 = number2
+            number2 = doSth;
+            document.write("số sau khi đảo ngược là:" + "(" + number1 + "," + number2 + ")");
+
+        }
+        swap(number1, number2);
+    </script>
+</body>
+
+</html>

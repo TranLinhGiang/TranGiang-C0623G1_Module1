@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_9</title>
+</head>
+
+<body>
+    <script>
+        let array = [1, 2, 3, 2, 4, 5, 2, 6, 7, 8, 10];
+        let arrayV = +prompt("nhập một số bất kì");
+        function doSth(arrayV, array) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (arrayV === array[i]) {
+                    count++;
+                }
+            } if (count > 0) {
+                alert("số lần xuất hiện trong mảng là:" + count)
+            } else {
+                alert("-1");
+            }
+        }
+        doSth(arrayV, array)
+    </script>
+</body>
+
+</html>

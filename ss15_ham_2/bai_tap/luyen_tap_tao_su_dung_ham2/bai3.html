@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_3</title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("nhập vào một số nguyên");
+
+        let factorial = 1
+        function call() {
+            for (let i = 1; i <= number; i++) {
+                factorial *= i
+            }
+            document.write("giai thừa của" + number + "là:" + factorial)
+        }
+        call();
+
+    </script>
+</body>
+
+</html>

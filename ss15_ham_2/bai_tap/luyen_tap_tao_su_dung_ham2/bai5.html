@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_5</title>
+</head>
+
+<body>
+    <script>
+        let num1 = +prompt("nhập vào số thứ nhất");
+        let num2 = +prompt("nhập vao số thứ hai");
+        let num3 = +prompt("nhập vào số thứ ba");
+        function doSth() {
+            if (num1 < num2 && num1 < num3) {
+                document.write("số có giá trị nhỏ nhất là" + " " + "num1" + "=" + num1);
+            } else if (num2 < num1 && num2 < num3) {
+                document.write("số có giá trị nhỏ nhất là" + " " + "num2" + "=" + num2);
+            } else {
+                document.write("số có giá trị nhỏ nhất là" + " " + "num3" + "=" + num3);
+            }
+        }
+        doSth()
+
+    </script>
+</body>
+
+</html>
