@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyen_doi_tien_te</title>
+</head>
+
+<body>
+
+    <input type="number" id="dauVao">
+
+
+    <select name="VND" id="select1">
+        <option value="vietNam">VND</option>
+        <option value="my">USD </option>
+
+    </select>
+    <select name="USD" id="select2">
+        <option value="vietNam">VND</option>
+        <option value="my">USD </option>
+    </select>
+    <button onclick="LamGiDo()">Convert</button>
+    <p id="ketQua"></p>
+    <script>
+        function LamGiDo() {
+            let ketQua = 0
+            let giatrivao = document.getElementById('dauVao').value;
+            let select1 = document.getElementById('select1');
+            let select2 = document.getElementById('select2');
+            if (select1.value == "vietNam" && select2.value == "my") {
+                ketQua = giatrivao / 23000;
+            }
+
+            if (select1.value == "my" && select2.value == "vietNam") {
+                ketQua = giatrivao * 23000;
+            }
+            if (select1.value == "vietNam" && select2.value == "vietNam") {
+                ketQua = giatrivao = giatrivao;
+            }
+            if (select1.value == "my" && select2.value == "my") {
+                ketQua = giatrivao = giatrivao;
+            }
+
+
+            document.getElementById("ketQua").innerText = ketQua;
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
