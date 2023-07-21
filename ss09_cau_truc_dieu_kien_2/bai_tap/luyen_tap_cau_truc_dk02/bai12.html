@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vay 50.000.000 VND lãi suất cố định 12 % / năm trong thời hạn 1 năm (12 tháng)</h1>
+    <script>
+      let tienVay= +prompt('nhập số tiền vay')
+      let soThangVay= +prompt('số tháng vay')
+      let laiSuatCoDinh= +prompt('nhập lãi suất')
+      let soTienGoc= tienVay / soThangVay
+      let soTienPhaiTra= (tienVay-soTienGoc)* laiSuatCoDinh/soThangVay
+       alert(soTienPhaiTra);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giai_phuong_trinh_bac_hai</title>
+</head>
+<body>
+    <h1> giải phương trình bậc 2: ax2 + bx + c = 0; a khac 0 </h1>
+
+    <script>
+        let a = +prompt('nhập giá trị a')
+        let b = +prompt('nhập giá trị b')
+        let c = +prompt('nhập giá trị c')
+        let nghiemKep = -b/2*a
+        let delta = Math.pow(b,2) -4 * a * c 
+        let nghiemMot = -b - (Math.sqrt(delta))/2*a   
+        let nghiemHai = -b + (Math.sqrt(delta))/2*a 
+        if (delta < 0) {
+            alert('phương trình vô nghiệm');
+        }
+        if(delta == 0) {
+            alert('phương trình có 2 nghiệm kép x1=x2 ='+ nghiemKep )
+        }
+         if(delta > 0) {
+             alert('phương trình có 2 nghiệm' + nghiemMot && nghiemHai )
+         }
+
+    </script>
+</body>
+</html>
