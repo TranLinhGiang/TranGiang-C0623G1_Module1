@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="tudien" id="string">
+    <button type="text" onclick="search()">Dịch ra </button>
+    <p id="result"></p>
+    <script>
+        function search() {
+            let english = ["banana", "lion", "apple", "big", "red"];
+            let vietnamese = ["chuối", "sư tử", "quả táo", "lớn", "đỏ"];
+            let string = document.getElementById("string").value;
+            let eng = 0;
+            let result = "";
+            for (let i = 0; i < english.length; i++) {
+                if (english[i] === string) {
+                    eng = i;
+                    for (let j = 0; j < vietnamese.length; j++) {
+                        if (eng === j) {
+                            result = vietnamese[j];
+                        }
+                       
+                    }
+                }
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

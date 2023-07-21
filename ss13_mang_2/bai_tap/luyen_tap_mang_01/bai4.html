@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình khởi tạo/nhập vào một mảng số nguyên 
+    và đảo ngược các phần tử trong mảng đó. -->
+    <script>
+        let numbers = [];
+        for (let i = 0; i < 6; i++) {
+            numbers[i] = +prompt("vui lòng nhập vào:");
+        }
+        document.write("mảng ban đầu là :" + numbers + "</br>");
+        let newNumber = [];
+        for (let j = numbers.length - 1; j >= 0; j--) {
+            newNumber.push(numbers[j]);
+        }
+        document.write("mảng sau khi đảo ngược là:" + newNumber);
+    </script>
+
+</body>
+
+</html>
