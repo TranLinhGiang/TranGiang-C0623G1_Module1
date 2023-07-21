@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dien_thoai</title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor(name, baterry, draft, inbox, outbox, status,) {
+                this.name = name;
+                this.baterry = baterry;
+                this.draft = draft;
+                this.inbox = inbox;
+                this.outbox = outbox;
+                this.status = status;
+            }
+
+            checkStatus() {
+                if (this.status) {
+                    console.log(this.name, "The mobile is on");
+                } else {
+                    console.log(this.name, "The mobile is off ");
+                }
+                this.baterry--;
+            }
+
+            turnOn() {
+                if (this.status) {
+                    console.log(" The mobile is on");
+                } else {
+                    this.status = true;
+                    this.baterry--;
+                }
+            }
+
+            turnOff() {
+                if (this.status) {
+                    console.log("The mobile is off");
+                } else {
+                    this.status = false;
+                    this.baterry--;
+                }
+            }
+            setMessageDraft(message) {
+                if (this.status) {
+                    this.draft.unshift(message);
+                    this.baterry--;
+                } else {
+                    console.log(" The mobile is off");
+                }
+            }
+
+            sendMessage(message, otherMobile) {
+                if (this.status) {
+                    this.outbox.unshift(message);
+                    otherMobile.inbox.unshift(message);
+                    this.baterry--;
+                } else {
+                    console.log(this.name, " The mobile is off");
+                }
+            }
+            chargeMobile() {
+                this.baterry++
+            }
+        }
+        let nokia = new Mobile("Nokia", 40, [], [], [], true);
+        let iphone = new Mobile("Iphone", 30, [], [], [], false);
+        nokia.turnOn();
+        nokia.checkStatus();
+        iphone.checkStatus();
+        nokia.chargeMobile();
+        iphone.chargeMobile();
+        iphone.turnOn();
+        nokia.sendMessage("okey", iphone);
+        iphone.sendMessage("6PM", nokia);
+        nokia.sendMessage("what time?", iphone);
+        iphone.sendMessage("Do you want to go to soccer?", nokia);
+        nokia.sendMessage("?????", iphone);
+        iphone.sendMessage("hey you", nokia);
+        console.log(nokia.inbox);
+        console.log(iphone.inbox);
+        console.log(" battery capacity of iphone ", iphone.baterry);
+        console.log(" battery capacity of nokia ", nokia.baterry);
+        nokia.turnOff();
+        iphone.turnOff();
+
+
+
+    </script>
+</body>
+
+</html>

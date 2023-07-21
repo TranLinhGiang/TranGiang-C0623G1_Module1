@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chuyen_doi_nhiet_do</title>
+</head>
+
+<body>
+    <script>
+        let number = +prompt("nhập vào độ C")
+        class Temperature {
+
+            constructor(doC) {
+                this.doC = doC;
+            }
+            doF() {
+                return this.doC * 1.8 + 32;
+            }
+            doKevin() {
+                return this.doC + 273.15;
+            }
+        }
+        let temperature1 = new Temperature(number);
+        let new_doF = temperature1.doF();
+        let new_doKevin = temperature1.doKevin();
+
+        document.write("độ F là:" + new_doF + " , " + "độ K là::" + new_doKevin)
+    </script>
+</body>
+
+</html>

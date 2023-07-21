@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xay_dung_lop_mo_ta_hinh_chu_nhat</title>
+</head>
+
+<body>
+    <canvas id="DemoCanvas" width="500" height="600"></canvas>
+    <script>
+
+        class HinhChuNhat {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+            getWidth() {
+                return this.height;
+            }
+            getHeight() {
+                return this.width;
+            }
+            setWidth() {
+                this.height = height;
+            }
+            setHeight() {
+                this.width = width;
+            }
+            getAcreage() {
+                return this.height * this.width;
+            }
+            getPerimeter() {
+                return (this.height + this.width) * 2;
+            }
+
+        }
+        let HinhChuNhat1 = new HinhChuNhat(100, 50);
+        let width = HinhChuNhat1.getWidth();
+        let height = HinhChuNhat1.getHeight();
+
+        HinhChuNhat1.setWidth(200);
+        HinhChuNhat1.setWidth()
+        document.write(HinhChuNhat1.getWidth());
+
+
+        let canvas = document.getElementById("DemoCanvas");
+        let ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#fa4b2a';
+        ctx.fillRect(10, 10, width, height)
+
+
+    </script>
+</body>
+
+</html>
