@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài tập số 2 </title>
+</head>
+
+<body>
+    <script>
+
+        let tempeRature;
+        do {
+            let tempeRature = +prompt('nhập nhiệt độ hiện tại');
+            if (tempeRature > 100) {
+                alert('yêu cầu giảm nhiệt độ')
+            }
+            if (tempeRature < 20) {
+                alert('yêu cầu tăng nhiệt độ')
+            }
+            if (tempeRature > 20 && tempeRature < 100) {
+                document.write("nhiệt độ hiện tại là" + " " + tempeRature)
+                break;
+            }
+
+
+        } while (true)
+    </script>
+
+</body>
+
+</html>

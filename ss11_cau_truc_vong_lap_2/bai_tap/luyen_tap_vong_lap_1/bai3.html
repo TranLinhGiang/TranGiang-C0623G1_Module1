@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiển thị ra 20 số trong dãy fibonacci </title>
+</head>
+
+<body>
+    <script>
+        const number = +prompt('nhập 20 để hiển thị 20 số đàu tiên:');
+        let n1 = 0, n2 = 1, nextTerm;
+
+        document.write('dãy fibonacci:');
+
+        for (let i = 1; i <= number; i++) {
+            document.write(n1 + "</br>");
+            nextTerm = n1 + n2;
+            n1 = n2;
+            n2 = nextTerm;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=playGame()>Chơi</button>
+    <script>
+        function playGame() {
+            let canDuoi = +prompt("nhập căn dưới");
+            let canTren = +prompt("nhập căn trên");
+            let random = Math.round(Math.random() * (canTren - canDuoi) + canDuoi);
+            console.log(random);
+            let solan = 1;
+            do {
+                let so = +prompt("Nhập số mà bạn dự đoán.")
+                if (so === random) {
+                    alert("Số bạn đoán đã đúng.");
+                    break;
+                } else if (so < random) {
+                    alert("Số bạn đoán bé hơn");
+                } else {
+                    alert("Số bạn đoán lớn hơn");
+                }
+                if (solan === 3) {
+                    alert("Bạn đã hết lượt nhập.")
+                }
+                solan++;
+
+            } while (solan <= 3)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

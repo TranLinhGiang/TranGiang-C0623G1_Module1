@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tìm số đầu tiên trong dãy fibonacci chia hết cho 5 </title>
+</head>
+<body>
+<script>
+ const number= 10;
+let n1 = 0, n2 = 1, nextTerm;
+
+document.write('dãy fibonacci:');
+
+for (let i = 1; i <= number; i++) {
+  document.write(n1+ "</br>");
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+    if (nextTerm % 5 ==0) {
+    document.write('so chia het cho 5 là :'+" "+ nextTerm)
+    break;
+ }
+ 
+ }
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tính lãi suất </title>
+</head>
+
+<body>
+    <script>
+let sendMoney = +prompt("nhập số tiền gửi ngân hàng");
+let interestRate =+prompt("nhập lãi suất (% năm)");
+let day = +prompt("nhập số ngày gửi");
+let profitAmount = sendMoney * (interestRate/100) *(day/365);
+  document.write("tiền lãi là " +profitAmount +"VND")
+
+  </script>
+
+</body>
+
+</html>
