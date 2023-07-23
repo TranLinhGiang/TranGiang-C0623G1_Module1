@@ -1,92 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <h1> Market Research Survey </h1>
-    <h4>Please take a few moments to complete this satisfaction survey.</h4>
-    <h4> what is your age range?</h4>
-    <select>
-    
+
+<body style="width: 30%">
+
+
+    <h2>Market Research survey</h2>
+    <h6> Please take a few moments to complete this satisfaction survey</h6>
+    <hr>
+    <h3>What is your age range?</h3>
+
+    <select style="width: 200px;">
         <option>18-24</option>
-        <option>24-30</option>
-        <option>30-36</option>
+        <option>24-28</option>
+        <option>28-34</option>
     </select>
-    <h4> What is your yearly income range?</h4>
-    <select>
-        <option> $0 - $25,000</option>
-        <option> $25,000 - $35,000</option>
-        <option> $35,000 - $45,000</option>
+
+    <h3>What is your yearly income range?</h3>
+    <select style="width: 200px;">
+        <option>0$-25,00$</option>
+        <option>25,000$-30,000$</option>
+        <option>30,000$-35,000$</option>
     </select>
+
+    <h3>Gender</h3>
+    <form>
+        <input type="radio" name="gender">Male
+        <br>
+        <input type="radio" name="gender">Female
+    </form>
+    <h3>Which of the following product have your purchased in the last 2 month. Pleae check all that ap</h3>
+    <form>
+        <input type="checkbox" name="product"> product1
+        <br>
+        <input type="checkbox" name="product"> product2
+        <br>
+        <input type="checkbox" name="product"> product3
+    </form>
+    <h3>How often would you use our new product?</h3>
+    <form>
+        <input type="checkbox" name="date">Daily
+        <br>
+        <input type="checkbox" name="date">Weekly
+        <br>
+        <input type="checkbox" name="date">Monthly
+    </form>
+    <h3>What would you like to see in the new product </h3>
     <table>
-<tr>
-    
-   <h4> Gender Identity </h4>
-   
-    <td> <input type="radio" name="Gender"> Male
-<br>
-    <input type="radio" name="Gender"> Female
-<br>
-    <input type="radio" name="Gender"> Nonbinary
-<br>
-    <input type="radio" name="Gender"> Other
-</td>
-
-   </tr>
-   </table>
-   &nbsp;
-   <input>
-<h4>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h4>
-
-<tr>
-    <td>
-        <input type="checkbox" name="Which"> Product 1
-        <br>
-        <input type="checkbox" name="Which"> Product 2
-        <br>
-        <input type="checkbox" name="Which"> Product 3
-    </td>
-</tr>
-<h4>How often would you use our new product?</h4>
-<tr>
-    <td>
-        <input type="radio" name="Which"> Daily
-        <br>
-        <input type="radio" name="Which"> Weekly
-        <br>
-        <input type="radio" name="Which"> Monthly
-
-    </td>
-</tr>
-<h4>What would you pay for the new product?</h4>
-<table>
-    <tr>
-        <td> $</td>
-        <td> 
-            <input>
-        </td>
-        <td>
-           
-            . <input>
-        </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td> Dollas </td>
-        <td> Cents </td>
-    </tr>
-</table>
+        <tr>
+            <td>$</td>
+            <td><input type="text" style="width: 100px;"></td>
+            <td>.</td>
+            <td><input type="text" style="width: 30px;"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Dollars</td>
+            <td></td>
+            <td>Center</td>
+        </tr>
+    </table>
+    <h3>what features would you like to seen in the new product.</h3>
+    <input type="text" style="width: 400px; height:150px;">
+    <h3>Pleae rate your level of agreement with the following statement</h3>
+    <table border="1px">
+        <tr style="width: 30px;">
+            <td></td>
+            <th>Strongly Disagree</th>
+            <th>Disagree</th>
+            <th>Agree</th>
+            <th>Strongly Agree</th>
+        </tr>
+        <tr style="width: 30px;">
+            <th>Our products are priced fairly</th>
+            <td> <input type="radio" name="select"><br>1</td>
+            <td><input type="radio" name="select"><br>2</td>
+            <td><input type="radio" name="select"><br>3</td>
+            <td><input type="radio" name="select"><br>4</td>
+        </tr>
+        <tr style="width: 30px;">
+            <th>Our products are hight quality</th>
+            <td> <input type="radio" name="select"><br>1</td>
+            <td><input type="radio" name="select"><br>2</td>
+            <td><input type="radio" name="select"><br>3</td>
+            <td><input type="radio" name="select"><br>4</td>
+        </tr>
+        <tr style="width: 30px;">
+            <th>You would recommend our product to a friend or coworker.</th>
+            <td> <input type="radio" name="select"><br>1</td>
+            <td><input type="radio" name="select"><br>2</td>
+            <td><input type="radio" name="select"><br>3</td>
+            <td><input type="radio" name="select"><br>4</td>
+        </tr>
+    </table>
+    <br>
+    <button style="width: 100px; height: 30px;">Submit</button>
 
 
-
-
-
-
-
-
-
-</body>
 </html>
