@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_1</title>
+</head>
+
+<body>
+    <script>
+        let x = [1, 2, 3, 4];
+        document.write("Mảng đầu tiên là:" + "[" + x + "]" + "</br>");
+        for (let i = 1; i < x.length; i++) {
+            x[i] = x[i] + x[i - 1];
+
+        }
+        document.write("Kết quả là:" + "[" + x + "]");
+
+    </script>
+</body>
+
+</html>
