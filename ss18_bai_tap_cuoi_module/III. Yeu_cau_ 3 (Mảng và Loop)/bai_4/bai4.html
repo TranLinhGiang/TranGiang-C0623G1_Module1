@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 4</title>
+</head>
+
+<body>
+    <h1>Menu drink:</h1>
+    <ol type="1">
+        <li>Cafe- 15000 VND </li>
+        <li>Cam vắt- 20000 VND </li>
+        <li>Nước ép cà rốt- 30000 VND </li>
+        <li>Nước ép cà chua- 25000 VND </li>
+        <li>Nước lọc-10000 VND </li>
+        <li>Nước dừa-30000 VND </li>
+        <li>Thoát gọi món </li>
+    </ol>
+    <button onclick="oderDrink()" style="width: 200px; height: 30px;background-color: red; border: none;">Oder</button>
+    <script>
+
+
+        function oderDrink() {
+            let drinkOrderNumber = [1, 2, 3, 4, 5, 6]; // số thứ tự nước
+            let price = [15000, 20000, 30000, 25000, 10000, 30000];// giá.
+            let chooseADrink; // chọn nước.
+            let quantity = 0; // so luong
+            let sum = 0;
+
+            do {
+                chooseADrink = prompt("vui lòng chọn thức uống, bằng cách chọn số thứ tự ở bảng oder");
+                for (let i = 0; i < drinkOrderNumber.length; i++) {
+                    if (chooseADrink == drinkOrderNumber[i]) {
+                        quantity = +prompt("Số lượng bạn muốn mua");
+                        sum = quantity * price[i];
+                        alert("Tổng tiền bạn phải thanh toán là:" + sum + "VNĐ");
+                    }
+                }
+                if (chooseADrink == 7) {
+                    alert("Bạn muốn thoát gọi  nước không");
+                    break;
+                }
+
+
+
+            } while (true)
+
+        }
+    </script>
+</body>
+
+</html>

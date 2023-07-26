@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width+ initial-scale=1.0">
-    <title>Document</title>
+    <title>bai 3 </title>
 </head>
 
 <body>
     <script>
-        prompt("Menu đồ uống:" + "1. Cafe" + "2. Cam vắt" + "3. Nước ép cà rốt" + "4. Nước ép cà chua" + "5. Nước lọc" + "6. Nước");
-        function placeOrder() 
-        const menu = {
-            1: ["Cafe", 20000],
-            2: ["Cam vắt", 25000],
-            3: ["Nước ép cà rốt", 30000],
-            4: ["Nước ép cà chua", 35000],
-            5: ["Nước lọc", 10000],
-            6: ["Nước dừa", 15000]
+        let A=[5,2,5];
+        let B=[6,3,4];
+        let fraction;
+        let index;
+        let maxFraction= A[0]/B[0];
+        for (let i=0;i<A.length;i++ ) {
+           if ((A[i] / B[i])>maxFaction){
+            maxFraction=A[i]/B[i];
+            index=i;
+           }
+        
         }
-        let total = 0 
+        document.write("5/4 là phân số lớn nhất,có chỉ số là:"+" "+index);
     </script>
 </body>
 
