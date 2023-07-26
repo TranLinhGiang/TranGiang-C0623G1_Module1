@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 1</title>
+</head>
+
+<body>
+    <script>
+        function Revision(string) {
+            let arrStr = string.split(" "); // cắt mỗi tên thành mảng.
+            console.log(arrStr);
+            let arrResult = []; //tạo một mảng rổng mới để đẩy vào.
+            for (let i = 0; i < arrStr.length; i++) {
+                if (arrStr[i] !== "") {
+                    arrResult.push(arrStr[i]);// đẩy vào mảng rổng đã tạo.
+                    console.log(arrResult)
+                }
+            }
+            let strResult = "";
+            for (let i = 0; i < arrResult.length; i++) {
+                for (let j = 0; j < arrResult[i].length; j++) {
+                    if (j === 0) {
+                        strResult += arrResult[i][j].toUpperCase();// chuyển thành chữ hoa
+
+                    } else {
+                        strResult += arrResult[i][j].toLowerCase();//chuyển thành chữ thường
+                    }
+                }
+                if (i < arrResult.length - 1) {
+                    strResult += " ";
+                }
+            }
+            return strResult;
+        }
+        let str = "TrẦn lINh gIaNg  ";
+        console.log(Revision(str));
+
+        function largestLength(string) { // tìm độ dài lớn nhất
+            let newArr = string.split(" ");// cắt đi những khoảng trắng
+            console.log(newArr);
+            let maxStr = newArr[0];//cho độ vị trí đàu tiên là dài nhất
+            for (let i = 1; i < newArr.length; i++) { // cho chạy đến ngang độ dài thì dùng lại
+                if (maxStr.length < newArr[i].length) {  // nếu độ dài cho lúc đầu ngắn hơn độ dài so sánh tiếp theo.
+                    maxStr = newArr[i];//thì gán độ dài tiếp theo là max
+                }
+            }
+            return maxStr;
+        }
+        let str1 = "Trần Linh Giang";
+        console.log(largestLength(str1));// console ra từ dài nhất
+    </script>
+
+</body>
+
+</html>

@@ -10,14 +10,12 @@
 <body>
     <script>
         let salary = +prompt("nhập số lương của bạn");
-        
+
         if (salary >= 15000000) {
             document.write("số tiền thực nhận là :" + (salary - (salary * 0.2)) + "VND");
-        }
-        if (salary > 7000000) {
+        } else if (salary > 7000000) {
             document.write("số tiền thực nhận là :" + (salary - (salary * 0.1)) + "VND");
-        }
-        if (salary < 7000000) {
+        } else {
             document.write("số tiền thực nhận là :" + (salary - (salary * 0.05)) + "VND");
         }
 
