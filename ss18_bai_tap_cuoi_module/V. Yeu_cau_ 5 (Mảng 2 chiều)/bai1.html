@@ -9,28 +9,24 @@
 
 <body>
     <script>
-        let m = prompt("vu long nhap vao");
-        let n = prompt('vui long nhap vao');
-        let arr = [];
-        for (let i = 0; i < m; i++) {
-            arr[i] = [];
-            for (let j = 0; j < n; j++) {
-                arr[i][j] = +prompt("Nhập phần tử: ")
-            }
-        }
-        document.write(arr);
+        let m = +prompt("nhập độ dài của mảng m");
+        let n = +prompt("nhập độ dài của mảng n");
+        let a = []
+        let chan = [];
         let sum = 0;
         for (let i = 0; i < m; i++) {
+            a[i] = [];
             for (let j = 0; j < n; j++) {
-                if (arr[i][j] % 2 === 0) {
-                    sum += arr[i][j];
+                a[i][j] = +prompt("vui lòng nhập phần tử " + (j + 1) + " trong mảng " + (i + 1));
+                if (a[i][j] % 2 == 0) {
+                    chan.push(a[i][j]);
+                    sum += a[i][j];
                 }
             }
         }
-        document.write(sum);
-
-
-
+        document.write(a + "</br>");
+        document.write(chan + "</br>");
+        document.write(sum + "</br>");
     </script>
 </body>
 
