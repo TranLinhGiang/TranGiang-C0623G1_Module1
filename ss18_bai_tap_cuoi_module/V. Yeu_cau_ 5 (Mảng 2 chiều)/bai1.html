@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai 1</title>
+</head>
+
+<body>
+    <script>
+        let m = prompt("vu long nhap vao");
+        let n = prompt('vui long nhap vao');
+        let arr = [];
+        for (let i = 0; i < m; i++) {
+            arr[i] = [];
+            for (let j = 0; j < n; j++) {
+                arr[i][j] = +prompt("Nhập phần tử: ")
+            }
+        }
+        document.write(arr);
+        let sum = 0;
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        document.write(sum);
+
+
+
+    </script>
+</body>
+
+</html>

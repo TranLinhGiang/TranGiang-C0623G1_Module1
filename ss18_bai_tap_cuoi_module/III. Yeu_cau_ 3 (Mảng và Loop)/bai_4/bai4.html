@@ -25,11 +25,12 @@
 
 
         function oderDrink() {
-            let drinkOrderNumber = [1, 2, 3, 4, 5, 6]; // số thứ tự nước
-            let price = [15000, 20000, 30000, 25000, 10000, 30000];// giá.
+            let drinkOrderNumber = [1, 2, 3, 4, 5, 6]; // số thứ tự nước của từn món.
+            let price = [15000, 20000, 30000, 25000, 10000, 30000];// giá tương ứng mỗi đồ uống theo stt.
             let chooseADrink; // chọn nước.
-            let quantity = 0; // so luong
-            let sum = 0;
+            let quantity = 0; // số lượng.
+            let sum = 0; // tổng số tiền thanh toán cuả một món.
+            let newSum=0; // tổng thanh toán của tất cả các món đã mua và muốn thanh toán.
 
             do {
                 chooseADrink = prompt("vui lòng chọn thức uống, bằng cách chọn số thứ tự ở bảng oder");
@@ -37,13 +38,15 @@
                     if (chooseADrink == drinkOrderNumber[i]) {
                         quantity = +prompt("Số lượng bạn muốn mua");
                         sum = quantity * price[i];
-                        alert("Tổng tiền bạn phải thanh toán là:" + sum + "VNĐ");
+                        alert("Tiền bạn phải thanh toán cho món là :" + sum + "VNĐ");
                     }
                 }
                 if (chooseADrink == 7) {
                     alert("Bạn muốn thoát gọi  nước không");
                     break;
                 }
+                newSum= newSum+sum; // tính tổng của nhiều món khi muốn thanh toán
+                alert("Tổng số tiền phải phải trả là:"+ newSum);
 
 
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let S = "cabca";
+        let arrS = S.split("");//cắt thành các chữ ra riêng biệt.
+        let arrSort = arrS.sort();// sắp xếp mảng lại để dễ so sánh.
+        let arrNew = [];
+        count = 0;
+
+        for (let i = 0; i < arrSort.length; i++) {
+            if (arrSort[i] !== arrSort[i + 1]) {
+                arrNew.push(arrSort[i]);
+                count++;
+            }
+        }
+        console.log(count, arrNew.join(','));
+
+
+
+    </script>
+    </script>
+</body>
+
+</html>

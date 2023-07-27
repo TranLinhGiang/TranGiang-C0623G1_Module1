@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai_3</title>
+</head>
+
+<body>
+    <script>
+        let string1 = prompt("nhập vào chuỗi ký tự")
+        string1Spl = string1.split("");
+        string1Spl.sort();
+
+        let string2 = prompt("nhập vào chuỗi ký tự")
+        string2Spl = string2.split("");
+        string2Spl.sort();
+
+        let string3 = [];
+        for (let i = 0; i < string1Spl.length; i++) {
+            for (let j = 0; j < string2Spl.length; j++) {
+                if (string1Spl[i] === string2Spl[j]) {
+                    string3.push(string1Spl[i]);
+                    string1Spl.splice(i, 1); // xóa một phần tử tại vị trí i
+                    string2Spl.splice(j, 1);// xóa một phần tử tại vị trí j
+                }
+            }
+        }
+        document.write("số ký tự chung là:"+string3 + "</br>");
+        document.write("độ dài mới bằng:" + string3.length);
+    </script>
+</body>
+
+</html>
