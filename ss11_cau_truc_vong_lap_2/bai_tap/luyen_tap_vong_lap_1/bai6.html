@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên</title>
+    <title></title>
 </head>
 
 <body>
     <script>
-        let count = 0;
-        let sum = 0;
-        for (let i = 1; i < 1000; i++) {
-            if (i % 7 == 0) {
-                sum = sum + i;
-                count = count + 1;
+        let h = +prompt("nhap chieu cao");
+        for (let i = 0; i <= h; i++) {
+            for (let k = h; k > i; k--) {
+                document.write("&nbsp");
             }
-            if (count == 30) {
-                break;
+            for (let j = 1; j <= i; j++) {
+                // document.write("*");
+                if (i == 1 || i == h || j == 1 || i == j) {
+                    document.write("*")
+                } else {
+                    document.write("&nbsp&nbsp")
+                }
             }
+
+            document.write("</br>")
         }
-        document.write("tong 30 so dau tien chia het cho 7 la:" + sum);
     </script>
 
 </body>
